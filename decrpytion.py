@@ -14,6 +14,7 @@ def decrypt_file(file_name):
     decrypted_data = fernet.decrypt(encrypted_data)
 
     with open(file_name, "wb") as file:
+        file.write(decrypted_data)
 
 if __name__ == "__main__":
     decrypt_file("encrypted_files.txt")
